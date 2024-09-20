@@ -1,0 +1,53 @@
+let irány = 0
+input.onGesture(Gesture.Shake, function () {
+    irány = randint(0, 5)
+    if (irány == 0) {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . . # . .
+            . . . . .
+            . . . . .
+            `)
+    } else if (irány == 1) {
+        basic.showLeds(`
+            . . . . .
+            . . . . .
+            . # . # .
+            . . . . .
+            . . . . .
+            `)
+    } else if (irány == 2) {
+        basic.showLeds(`
+            . . # . .
+            . . . . .
+            . . # . .
+            . . . . .
+            . . # . .
+            `)
+    } else if (irány == 3) {
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . . . .
+            . # . # .
+            . . . . .
+            `)
+    } else if (irány == 4) {
+        basic.showLeds(`
+            . . . . .
+            . # . # .
+            . . # . .
+            . # . # .
+            . . . . .
+            `)
+    } else {
+        basic.showLeds(`
+            . # . # .
+            . . . . .
+            . # . # .
+            . . . . .
+            . # . # .
+            `)
+    }
+})
